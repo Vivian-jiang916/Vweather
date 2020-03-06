@@ -1,16 +1,24 @@
-package db;
+package com.vweather.app.db;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import model.City;
-import model.County;
-import model.Province;
+import com.vweather.app.model.City;
+import com.vweather.app.model.County;
+import com.vweather.app.model.Province;
+
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-
+/**
+ *  VWeatherDB是一个单例类，将它的构造方法私有化
+ *  用getInstance()方法来获取 VWeatherDB的实例。
+ * 这样保证了全局范围内只有一个VWeatherDB的实例
+ * 接着在VWeatherDB中提供了六组方法，saveProvince(),loadProvince(),saveCity(),
+ * loadCities(),saveCounty(),loadCounties()分别用于读取和存储省、时、县的数据。
+ *
+ */
 public class VWeatherDB
 {
 	/**

@@ -1,4 +1,4 @@
-package model;
+package com.vweather.app.model;
 
 public class Province 
 {
